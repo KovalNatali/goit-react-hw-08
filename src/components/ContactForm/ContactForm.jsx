@@ -3,8 +3,8 @@ import { Form, Label } from "./ContactForm.styled";
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import { useSelector, useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsOps";
-import { itemsSelector } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contacts/operations";
+import { itemsSelector } from "../../redux/contacts/selectors";
 
 export const AddContastForm = () => {
   const [name, setName] = useState("");

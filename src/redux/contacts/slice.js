@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { fetchContacts, addContact, deleteContact } from "../redux/contactsOps";
+import { fetchContacts, addContact, deleteContact } from "./operations";
 
 const INITIAL_STATE = {
   items: [],
@@ -42,9 +42,6 @@ const contactsSlice = createSlice({
         state.loading = true;
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
-        // state.items = state.items.filter(
-        //   (item) => item.id !== action.payload.id
-        // );
         state.loading = false;
         state.error = false;
         const index = state.items.findIndex(
@@ -58,13 +55,4 @@ const contactsSlice = createSlice({
       }),
 });
 
-export const itemsSelector = (state) => state.items.items;
-export const itemsLoadingSelector = (state) => state.loading;
-export const itemsErrorSelector = (state) => state.error;
-
 export const itemsReducer = contactsSlice.reducer;
-// export const selectContactsList = state => state.contacts.items;
-// export const selectIsLoading = state => state.contacts.isLoading;
-// export const selectError = state => state.contacts.error;
-
-// export const selectContactsFilter = state => state.filter;
