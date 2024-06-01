@@ -1,9 +1,11 @@
-// import Navigation from "../Navigation/Navigation";
+import Navigation from "../Navigation/Navigation";
+import { AuthNav } from "../AuthNav/AuthNav";
 
-// export const AppBar = () => {
-//   return (
-//     <header>
-//       <Navigation />
-//     </header>
-//   );
-// };
+export const AppBar = () => {
+  return (
+    <header>
+      <Navigation />
+      <AuthNav />
+    </header>
+  );
+};
