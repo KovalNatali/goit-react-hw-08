@@ -1,8 +1,3 @@
-// const HomePage = () => {
-//   return <div>HomePage</div>;
-// };
-// export default HomePage;
-
 import { Helmet } from "react-helmet-async";
 
 export default function HomePage() {
@@ -17,7 +12,7 @@ export default function HomePage() {
       <Helmet>
         <title>Your PhoneBook</title>
       </Helmet>
-      <h1> Welcome page</h1>
+      <h2> Welcome page</h2>
     </div>
   );
 }

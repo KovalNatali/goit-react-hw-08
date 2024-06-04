@@ -2,14 +2,23 @@ import { ContactsListItem } from "../../components/ContactList/ContactsListItem"
 import { useSelector } from "react-redux";
 import { itemsSelector } from "../../redux/contacts/selectors";
 import { selectFilteredContacts } from "../../redux/filters/selectors";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchContacts } from "../../redux/contacts/operations";
 
 export const ContactsList = () => {
-  const items = useSelector(itemsSelector);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
+  const contacts = useSelector(itemsSelector);
   const filter = useSelector(selectFilteredContacts);
 
   const getVisibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
-    return items.filter((contact) =>
+    return contacts.filter((contact) =>
       contact.name.toLocaleLowerCase().includes(normalizedFilter)
     );
   };
