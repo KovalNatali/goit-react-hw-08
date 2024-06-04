@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+`;
+export const Label = styled.label`
+  display: flex;
 `;

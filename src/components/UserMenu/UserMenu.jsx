@@ -2,7 +2,8 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { logOut } from "../../redux/auth/operations";
 import { selectUser } from "../../redux/auth/selectors";
-import { Wrapper } from "./UserMenu.styled";
+import { Wrapper, Label } from "./UserMenu.styled";
+import { Button } from "@mui/material";
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -10,12 +11,12 @@ export const UserMenu = () => {
 
   return (
     <Wrapper>
-      <div>
+      <Label>
         <p>Welcome, {user.name}</p>
-        <button type="button" onClick={() => dispatch(logOut())}>
+        <Button type="button" onClick={() => dispatch(logOut())}>
           Logout
-        </button>
-      </div>
+        </Button>
+      </Label>
     </Wrapper>
   );
 };

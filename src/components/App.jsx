@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./Layout";
 import { refreshUser } from "../redux/auth/operations";
 import { selectIsRefreshing } from "../redux/auth/selectors";
-
 import { RestrictedRoute } from "./RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute";
 

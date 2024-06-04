@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-// import css from "./AuthNav.module.css";
+import { Nav } from "./AuthNav.styled";
 
 const AuthNav = () => {
   return (
-    <div>
+    <Nav>
       <NavLink to="/register">Register</NavLink>
       <NavLink to="/login">Log In</NavLink>
-    </div>
+    </Nav>
   );
 };
 export default AuthNav;

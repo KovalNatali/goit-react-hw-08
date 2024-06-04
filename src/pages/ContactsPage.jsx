@@ -1,9 +1,3 @@
-// const ContactsPage = () => {
-//   return <div>ContactsPage</div>;
-// };
-
-// export default ContactsPage;
-
 import { Helmet } from "react-helmet-async";
 import { AddContastForm } from "../components/ContactForm/ContactForm";
 import { ContactsList } from "../components/ContactList/ContactsList";
