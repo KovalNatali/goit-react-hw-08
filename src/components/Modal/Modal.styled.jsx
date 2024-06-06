@@ -21,7 +21,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { itemsLoadingSelector } from "../../redux/contacts/selectors";
 import { deleteContact } from "../../redux/contacts/operations";
 
-export default function NestedModal(item, id, name, number) {
+export default function NestedModal(item) {
   const dispatch = useDispatch();
   const isFetching = useSelector(itemsLoadingSelector);
   const [open, setOpen] = React.useState(false);
