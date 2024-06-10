@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
 import { TextField, Button } from "@mui/material";
-import { Form, Label } from "./RegisterForm.styled";
+import { Form, Label } from "./RegistrationForm.styled";
 
-export const RegisterForm = () => {
+export const RegistrationForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {

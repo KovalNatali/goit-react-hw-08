@@ -1,10 +1,4 @@
-// const RegistrationPage = () => {
-//   return <div>RegistrationPage</div>;
-// };
-
-// export default RegistrationPage;
-
-import { RegisterForm } from "../components/RegisterForm/RegisterForm";
+import { RegistrationForm } from "../components/RegistrationForm/RegistrationForm";
 import { Helmet } from "react-helmet-async";
 import { Container } from "@mui/material";
 
@@ -16,7 +10,7 @@ const RegistrationPage = () => {
       </Helmet>
       <Container maxWidth="xl">
         <h2>Registration</h2>
-        <RegisterForm />
+        <RegistrationForm />
       </Container>
     </div>
   );
