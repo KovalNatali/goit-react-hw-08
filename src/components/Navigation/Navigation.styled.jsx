@@ -8,3 +8,10 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
 `;
+
+// export const NavLink = styled.a`
+//   text-decoration: none;
+// `;
+// export const Tab = styled(NavLink)`
+//   text-decoration: none;
+// `;

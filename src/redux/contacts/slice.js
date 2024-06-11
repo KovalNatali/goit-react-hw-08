@@ -54,11 +54,12 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.error = action.payload;
       })
-      .addCase(logOut.fulfilled, (state) => {
-        state.user = { name: null, email: null };
-        state.token = null;
-        state.isLoggedIn = false;
-      }),
+      // .addCase(logOut.fulfilled, (state) => {
+      //   state.user = { name: null, email: null };
+      //   state.token = null;
+      //   state.isLoggedIn = false;
+      // }),
+      .addCase(logOut.fulfilled, () => INITIAL_STATE),
 });
 
 export const itemsReducer = contactsSlice.reducer;
