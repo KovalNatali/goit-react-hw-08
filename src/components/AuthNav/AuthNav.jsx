@@ -4,8 +4,12 @@ import { Nav } from "./AuthNav.styled";
 const AuthNav = () => {
   return (
     <Nav>
-      <NavLink to="/register">Register</NavLink>
-      <NavLink to="/login">Log In</NavLink>
+      <NavLink to="/register" style={{ textDecoration: "none" }}>
+        Register
+      </NavLink>
+      <NavLink to="/login" style={{ textDecoration: "none" }}>
+        Log In
+      </NavLink>
     </Nav>
   );
 };

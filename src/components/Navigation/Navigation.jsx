@@ -8,7 +8,9 @@ const Navigation = () => {
 
   return (
     <Nav>
-      <NavLink to="/">Home</NavLink>
+      <NavLink to="/" style={{ textDecoration: "none" }}>
+        Home
+      </NavLink>
       {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
     </Nav>
   );
